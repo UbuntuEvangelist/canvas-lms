@@ -10,7 +10,8 @@
     "canvas_offline_course_viewer": "https://github.com/instructure/canvas_offline_course_viewer.git#1.1.0",
     "fullcalendar": "https://github.com/ryankshaw/fullcalendar.git#aa686b36d10cee1e1e3ec7c7784145e46667d47d",
     "instructure-icons": "4.2.0",
-    "tinymce": "4.5.7"
+    "tinymce": "4.5.7",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "axe-core": "2.1.7",
@@ -150,6 +151,9 @@
     "webpack-stats": "webpack --profile --json",
     "webpack-production": "NODE_ENV=production gulp rev & webpack --color --config webpack.production.config.js",
     "jspec": "./spec/jspec.sh",
-    "jspec-watch": "./spec/jspec.sh --watch"
-  }
+    "jspec-watch": "./spec/jspec.sh --watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
